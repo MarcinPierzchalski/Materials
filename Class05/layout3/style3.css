@@ -1,0 +1,27 @@
+ *{
+    box-sizing: border-box;
+}
+header, footer{
+    height: 100px;
+    border:3px solid darkblue;
+    background-color: lightcyan;
+clear: both;
+}
+
+
+.small{
+    height: 150px;
+    width: 20%;
+    border:2px solid darkblue;
+    background-color: lightcyan;
+    float: left;
+}
+
+
+section.large{
+    height: 150px;
+    width: 40%;
+    border:2px solid darkblue;
+    background-color: lightcyan;
+    float: left;
+}
