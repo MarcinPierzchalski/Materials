@@ -38,6 +38,19 @@ class Cat extends Animal{
     }    
 }
 
+class Hamster extends Animal{
+    constructor(name, breed){
+        super(name)
+        this._breed = breed
+    }
+    speak(){
+        super.speak()
+        console.log(`${this.name} do something`)
+    }
+
+}
+
+
 let simba = new Dog('Simba','Shepard')
 let machi = new Dog('The Machine','Pitbull')
 let salem = new Cat('Salem', 'American Shorthair')
