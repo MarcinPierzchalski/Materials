@@ -56,7 +56,7 @@ let machi = new Dog('The Machine','Pitbull')
 let salem = new Cat('Salem', 'American Shorthair')
 
 let farm = [simba,machi,salem]
-
+// check
 for( a of farm ){
     a.speak()
 }
