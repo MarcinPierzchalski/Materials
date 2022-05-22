@@ -4,8 +4,11 @@
 
 class Contractor{
     constructor(name,role){
-        this.name = name
-        this.role = role
+        this._name = name
+        this._role = role
+    }
+    get name(){
+        return this._name
     }
 }
 
