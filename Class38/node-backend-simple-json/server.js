@@ -42,7 +42,6 @@ const server = http.createServer((req, res) => {
       }//student = leon
       else if(params['student'] != 'leon'){
         res.writeHead(200, {'Content-Type': 'application/json'});
-        let cooinflip = Math.ceil(Math.random()*2) ===1 ? 'heads': 'trails'
         const objToJson = {
           name: "unknown",
           status: "unknown",
@@ -57,8 +56,7 @@ const server = http.createServer((req, res) => {
       res.write(data);
       res.end();
     });
-  }
-  else if (page == '/js/main.js'){
+  }else if (page == '/js/main.js'){
     fs.readFile('js/main.js', function(err, data) {
       res.writeHead(200, {'Content-Type': 'text/javascript'});
       res.write(data);
