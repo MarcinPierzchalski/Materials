@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 
-const savage = {
+const rappers = {
     '21 savage':{
         'age': 29,
         'birthName': 'Bin cos tam',
@@ -24,8 +24,12 @@ app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api', (request, response) =>{
-    response.json(savage)
+app.get('/api/:rapperName', (request, response) =>{
+    const rappersName=request.params.rapperName
+    if(rappers[rappersName]){
+        response.json(rappers[rappersName])
+    }
+    else response.json(rappers.Dylan)
 })
 
 app.listen(PORT, () =>{
