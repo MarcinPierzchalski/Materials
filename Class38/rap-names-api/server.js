@@ -1,7 +1,9 @@
 const { response } = require('express')
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 8000
+app.use(cors())
 
 const rappers = {
     '21 savage':{
@@ -23,6 +25,8 @@ const rappers = {
 app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
 })
+
+
 
 app.get('/api/:rapperName', (request, response) =>{
     const rappersName=request.params.rapperName
